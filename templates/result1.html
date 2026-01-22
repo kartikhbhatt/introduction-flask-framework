@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result1</title>
+</head>
+<body>
+    <p>final results</p>
+    <table border=2>
+        {% for key, value in result.items() %}
+            <tr>
+                {# this is the comments section#}
+                <td>{{ key }}</td>
+                <td>{{ value }}</td>
+            </tr>
+            {% endfor %}
+            {# table ended here#}
+        </table>
+</body>
+</html>
