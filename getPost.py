@@ -14,13 +14,14 @@ def index():
 def about():
     return render_template("about.html")
 
-@app.route("/form", methods=["GET", "POST"])
+@app.route("/form", methods=["GET"])
 def form():
-    if request.method == "POST":
-        name=request.form['name']
-        return f"Hello, {name}!"
-    else:
-        return render_template("form.html")
+    return render_template("form.html")
+    
+@app.route("/submit", methods=["POST"])
+def submit():
+    name=request.form['name']
+    return f"Hello, {name}!"
 
 if __name__ == "__main__":
     app.run(debug=True)
